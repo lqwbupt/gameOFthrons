@@ -2,6 +2,6 @@
 需要安装第三方库scrapy，并安装Redis数据库和mongodb数据库。    运行main路径下的run.py即可。
 大致思路就是先通过爬虫将网页内容爬取存储到Redis库中，然后再对Redis数据库数据整理成固定格式，并存到mongodb库中。
 其中先下载一个角色文档，以便爬虫时识别同一章节出现的角色，将同一章出现的放在character下。然后通过共现矩阵算法对数据进行分析，得到角色之间的关系表格。
-通过NEO4J可以实现关系网络的绘制，由于不知名的原因，NEO4J无法实现对于数据的社区发现分析。社区发现部分通过直接使用python第三方igraph库的community_walktrap方法实现。代码在jupyter notebook运行。
+通过NEO4J可以实现关系网络的绘制，由于不知名的原因，NEO4J无法实现对于数据的社区发现分析。社区发现部分通过直接使用python第三方igraph库的community_walktrap方法实现。代码在jupyter notebook运行。存为gameOFthrons-Copy1.ipynb。
 
 
